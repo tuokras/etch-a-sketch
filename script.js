@@ -18,6 +18,7 @@ function createGrid() {
         column++;
         row = 0;
     }
+
     let boxes = document.querySelectorAll(".box");
     boxes.forEach((box) => {
         box.addEventListener("mouseover", (event) => {
@@ -40,11 +41,14 @@ function clearGrid() {
 let gridSize = 16;
 document.querySelector("button").addEventListener("click", (event) => {
     gridSize = prompt("Enter grid size", gridSize);
-    clearGrid();
-    createGrid();
-
+    if (gridSize == null || gridSize == "") {
+        alert("Please enter a grid size");
+    } else if (gridSize > 100) {
+        alert("Grid size cannot exceed 100");
+    } else {
+        clearGrid();
+        createGrid();
+    }
 })
-
-
 
 createGrid();
