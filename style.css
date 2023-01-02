@@ -4,6 +4,8 @@
 
 .box {
     width: 32px;
-    height: 32px;
-    text-align: center;
+    aspect-ratio: 1 / 1;
+    outline-style: solid;
+    outline-color: #d3d3d340;
+    outline-width: thin;
 }
