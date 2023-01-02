@@ -11,6 +11,7 @@ function createGrid() {
             var div1 = document.createElement("div");
             div1.setAttribute("id", "row-" + row)
             div1.setAttribute("class", "box");
+            div1.style.width = ((512 / gridSize).toString() + "px");
             document.querySelector("#column-" + column).appendChild(div1);
             row++;
         }
